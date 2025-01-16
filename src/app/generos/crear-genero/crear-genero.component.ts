@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { Router, RouterLink } from '@angular/router';
+import { primeraLetraMayusculas } from '../../compartidos/funciones/validaciones';
 
 
 @Component({
@@ -15,21 +16,9 @@ import { Router, RouterLink } from '@angular/router';
 export class CrearGeneroComponent {
 
   router = inject(Router);
-  private formbuilder = inject(FormBuilder)
-
-  form = this.formbuilder.group({
-    nombre:['',{validators:[Validators.required]}]
-  })
-  obtenerErrorCampoNombre():string{
-    let nombre = this.form.controls.nombre;
-    if ( nombre.hasError('required')){
-      return "El campo nombre es requerido";
-    }
-    return "";
-  }
+  
 
   guardarCambios(){
-    // this.router.navigate(['/generos']);
-    console.log(this.form.value);
+  
   }
 }
