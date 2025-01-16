@@ -6,7 +6,7 @@ import { ListadoGenericoComponent } from "../../compartidos/componentes/listado-
 
 @Component({
   selector: 'app-listado-peliculas',
-  imports: [CurrencyPipe, DatePipe, MatButtonModule, MatIconModule, NgClass, ListadoGenericoComponent],
+  imports: [ MatButtonModule, MatIconModule, ListadoGenericoComponent],
   templateUrl: './listado-peliculas.component.html',
   styleUrl: './listado-peliculas.component.css'
 })
