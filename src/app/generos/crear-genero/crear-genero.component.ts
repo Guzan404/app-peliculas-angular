@@ -5,20 +5,21 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { Router, RouterLink } from '@angular/router';
 import { primeraLetraMayusculas } from '../../compartidos/funciones/validaciones';
+import { FormularioGeneroComponent } from "../formulario-genero/formulario-genero.component";
+import { GeneroCreacionDTO } from '../generos';
 
 
 @Component({
   selector: 'app-crear-genero',
-  imports: [MatButtonModule,RouterLink,MatFormFieldModule,ReactiveFormsModule,MatInputModule],
+  imports: [MatButtonModule, RouterLink, MatFormFieldModule, ReactiveFormsModule, MatInputModule, FormularioGeneroComponent],
   templateUrl: './crear-genero.component.html',
   styleUrl: './crear-genero.component.css'
 })
 export class CrearGeneroComponent {
 
   router = inject(Router);
-  
 
-  guardarCambios(){
-  
+  guardarCambios(genero: GeneroCreacionDTO){
+    console.log('creando el genero',genero)
   }
 }
